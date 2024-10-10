@@ -1,0 +1,14 @@
+package com.mineda.avaliacao.repositories;
+
+import com.mineda.avaliacao.entity.Anuncio;
+
+@Repository
+
+public interface AnuncioRepository extends JpaRepository <Anuncio, Long> {
+    @Query("select t from Anuncio t where t.dataHora and t.preco>:preco")
+    List<Anuncio> findBy(@Param("nomeProduto") String nomeProduto, @Param("dataHora") 
+    DateTimeAtCompleted, @Param("descricao") String descricao, @Param("preco") float preco,
+    @Param("peso") float peso);
+}
+
+

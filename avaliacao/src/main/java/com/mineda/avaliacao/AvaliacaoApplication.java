@@ -11,3 +11,9 @@ public class AvaliacaoApplication {
 	}
 
 }
+
+
+
+//rodar o application
+//localhost:8080/banco/avaliacao
+//alterar o campo jdbc:h2:mem:testdb
